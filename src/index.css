@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d11;
+  --color-surface: #12151b;
+  --color-raised: #181c24;
+  --color-line: #222732;
+  --color-fg: #e7e9ee;
+  --color-muted: #8f96a3;
+  --color-dim: #5c6370;
+  --color-accent: #e9b949;
+  --color-accent-dim: #7a6329;
+  --color-warn: #ef6b6b;
+  --color-warn-dim: #6b2f2f;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html { color-scheme: dark; }
+body {
+  @apply bg-bg text-fg font-sans antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* focus states: visible everywhere, no outline soup */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+@layer components {
+.field {
+  @apply bg-surface border border-line rounded-md px-3 py-2 text-fg placeholder:text-dim w-full tabular-nums;
+  min-height: 42px;
+}
+.field:focus { @apply border-muted; outline: none; }
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-sm border border-line text-fg bg-surface hover:bg-raised transition-colors;
+  min-height: 42px;
+}
+.btn-primary { @apply bg-accent text-bg border-accent hover:bg-accent/90 font-medium; }
+.btn-ghost { @apply border-transparent bg-transparent text-muted hover:text-fg hover:bg-raised; }
+.btn-sm { @apply px-2 py-1 text-xs; min-height: 30px; }
+.seg { @apply inline-flex rounded-md border border-line bg-surface p-0.5 text-sm; }
+.seg > button { @apply px-3 py-1.5 rounded text-muted transition-colors; min-height: 34px; }
+.seg > button[aria-pressed="true"] { @apply bg-raised text-fg; }
+.seg > button.on-accent[aria-pressed="true"] { @apply text-accent; }
+.label { @apply text-xs text-muted; }
+.rule { @apply border-t border-line; }
+.note { @apply text-sm text-muted leading-relaxed; }
+}
+
+.recharts-tooltip-wrapper { outline: none; }
+.recharts-surface:focus { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
