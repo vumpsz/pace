@@ -40,10 +40,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdullaamer2019-maker/pace.git"
+    "url": "git+https://github.com/vumpsz/pace.git"
   },
-  "homepage": "https://github.com/abdullaamer2019-maker/pace#readme",
+  "homepage": "https://github.com/vumpsz/pace#readme",
   "bugs": {
-    "url": "https://github.com/abdullaamer2019-maker/pace/issues"
+    "url": "https://github.com/vumpsz/pace/issues"
   }
 }

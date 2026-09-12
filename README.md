@@ -6,7 +6,7 @@ versioned key (`{ schema: 2, ... }`) and can be exported/imported as JSON.
 
 ## Download
 
-Windows installer and portable exe: [Releases](https://github.com/abdullaamer2019-maker/pace/releases/latest). The installer is unsigned, so
+Windows installer and portable exe: [Releases](https://github.com/vumpsz/pace/releases/latest). The installer is unsigned, so
 SmartScreen may ask you to click "More info" then "Run anyway" the first time.
 
 ## Run and build
