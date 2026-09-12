@@ -13,6 +13,8 @@ module.exports = {
   appId: 'app.pace.tracker',
   productName: 'Pace',
   directories: { output: 'release', buildResources: 'build' },
+  // The GitHub Actions workflow attaches the files to the release; never let electron-builder publish.
+  publish: null,
   files: ['dist/**', 'electron/**', 'build/icon.png', 'package.json'],
   ...(hasLocalDist ? { electronDist: localDist } : {}),
   win: {
