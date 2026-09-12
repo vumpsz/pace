@@ -4,6 +4,11 @@ A desktop app (Electron + React + Tailwind) that runs entirely on your computer.
 no sync, no price feeds. Data is stored locally in the app's own profile folder under a
 versioned key (`{ schema: 2, ... }`) and can be exported/imported as JSON.
 
+## Download
+
+Windows installer and portable exe: [Releases](https://github.com/abdullaamer2019-maker/pace/releases/latest). The installer is unsigned, so
+SmartScreen may ask you to click "More info" then "Run anyway" the first time.
+
 ## Run and build
 
 ```bash

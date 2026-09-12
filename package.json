@@ -80,5 +80,13 @@
     },
     "electronDist": "node_modules/electron/dist"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullaamer2019-maker/pace.git"
+  },
+  "homepage": "https://github.com/abdullaamer2019-maker/pace#readme",
+  "bugs": {
+    "url": "https://github.com/abdullaamer2019-maker/pace/issues"
+  }
 }
